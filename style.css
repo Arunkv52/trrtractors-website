@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+header {
+    background: url(assets/banner-image.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+}
+
+
+/* marquee animation start */
+.marquee-container {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+}
+
+.marquee-text {
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(100%);
+    animation: marquee 30s linear infinite;
+    animation-play-state: paused;
+    /* default paused */
+    font-size: 80px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(-10%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+.vehicles-items {
+    border-top: 1px dashed rgb(36, 36, 36);
+    border-right: 1px dashed rgb(36, 36, 36);
+
+}
+
+/* Button customize */
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #0a091a, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+}
+
+.cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+}
+
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+/* Buttton customize */
+.accordion-flush>.accordion-item>.accordion-collapse,
+.accordion-flush>.accordion-item>.accordion-header .accordion-button,
+.accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed {
+    border-radius: 0;
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.ab-foot {
+    background: linear-gradient(rgb(34 66 183 / 66%), rgb(7 8 8 / 64%)), url(assets/abv-footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.margque-section{
+    transform: rotate(-0deg);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    a.navbar-brand img {
+        width: 187px;
+    }
+}
