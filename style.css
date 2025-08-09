@@ -181,3 +181,7 @@ header {
         justify-content: end;
     }
 }
+.marquee-text img {
+    width: 250px;
+    height: auto;
+}
