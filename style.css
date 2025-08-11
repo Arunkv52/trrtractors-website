@@ -63,7 +63,7 @@ header {
     display: inline-block;
     position: absolute;
     transform: translateX(100%);
-    animation: marquee 30s linear infinite;
+    animation: marquee 50s linear infinite;
     animation-play-state: paused;
     /* default paused */
     font-size: 50px;
@@ -71,7 +71,7 @@ header {
 
 @keyframes marquee {
     from {
-        transform: translateX(-10%);
+        transform: translateX(0%);
     }
 
     to {
